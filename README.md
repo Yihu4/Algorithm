@@ -1,9 +1,17 @@
 #算法学习记录
 ##PAT(B)
+- B01AplusBandC
 
->2018年11月10日
+在检测过程中出错是因为
 
-- B0002NumberSort数字分类
+```
+for (int i = 0; i < n; i++) {
+            System.out.println("Case #" + (i + 1) + ": " + result[i]);
+}
+```
+中`": "`的`:`后面没有加空格
+
+- B02NumberSort数字分类
 
 这个题目引入了java.text.DecimalFormat.
 
@@ -37,4 +45,27 @@ public class Test{
         System.out.println(new DecimalFormat("光速大小为每秒,###米").format(c)); //光速大小为每秒299,792,458米
     }
 }
+```
+
+- B03CountPrimeNumber
+
+判断是否是素数
+
+```
+public static boolean Isprime(int n) {
+        if (n == 1) {
+            return false;
+        } else if (n == 2) {
+            return true;
+        } else if (n % 2 == 0) {
+            return false;
+        } else {
+            for (int i = 3; i <= (int) Math.sqrt(n); i += 2) {
+                if (n % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
 ```

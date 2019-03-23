@@ -20,18 +20,17 @@
   30 11 2 9.7 9
  */
 
-
 package Algorithm.PAT.B;
 
 import java.text.DecimalFormat;
 
 import java.util.Scanner;
 
-public class B0002NumberSort {
+public class B02NumberSort {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
-        int[] array = new int[N];
+        int n = sc.nextInt();
+        int[] array = new int[n];
         int a1 = 0;
         int a2 = 0;
         int a3 = 0;
@@ -40,7 +39,7 @@ public class B0002NumberSort {
         int sum4 = 0;
         int count4 = 0;
         int a5 = 0;
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; i < n; i++) {
             array[i] = sc.nextInt();
             switch (array[i] % 5) {
                 case 0:
