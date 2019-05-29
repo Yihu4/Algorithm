@@ -40,8 +40,9 @@ public class Main {
     }
 
     private static void print(TreeSet<Stu> set) {
-        for(Stu s : set)
-            System.out.println(s.id + " " + s.d + " " + s.c);
+//        for(Stu s : set)
+//            System.out.println(s.id + " " + s.d + " " + s.c);
+        set.forEach((s) -> System.out.println(s.id + " " + s.d + " " + s.c));
     }
 
     static class Stu implements Comparable<Stu>{
